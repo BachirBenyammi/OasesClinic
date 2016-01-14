@@ -1,0 +1,1 @@
+d:\WINNT\Microsoft.NET\Framework\v1.1.4322\csc /target:library /out:CliniqueSite.dll functions.cs

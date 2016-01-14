@@ -1,0 +1,1 @@
+<%@ Application src="Global.cs" Inherits="CliniqueSite.Global" %>

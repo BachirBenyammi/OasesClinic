@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<title>Informations utiles</title>
+</head>
+
+<body>
+<p><b>Configuration logicielle minimale requise :</b></p>
+<ul>
+	<li>Windows 2000</li>
+	<li>Internet Explorer (IE 5.5)</li>
+	<li>Internet Information Server (IIS 5) </li>
+	<li>.Net Framework 1.0</li>
+	<li>SQL Server ou MSDE 2000</li>
+</ul>
+<p><b>Services Internet (IIS)</b> </p>
+<blockquote>
+	<p>Cliquez sur Démarrer, pointez sur Paramètres, 
+	cliquez sur Panneau de configuration, et démarrez 
+	l'application Ajout/Suppression de programmes.</p>
+	<p>Sélectionnez Ajouter/Supprimer des composants 
+	Windows, Cochez sur Services Internet (IIS). </p>
+	<p align="center">
+	<img border="0" src="iis.gif" width="636" height="473"><br>
+	Fig 1 : L'installation de IIS</p>
+</blockquote>
+<p><b>Internet Explorer (IE)</b> </p>
+<blockquote>
+	<p>Après l'installation redémarrer l'ordinateur 
+	pour faire la mise à jour de votre navigateur</p>
+</blockquote>
+<p><b>MSDE</b> </p>
+<blockquote>
+	<p>Après l'installation redémarrer l'ordinateur pour lancer le serveur MSSQL</p>
+	<p align="center">
+	<img border="0" src="mssql.jpg" width="291" height="254"><br>
+	Fig 2 : le serveur MSSQL</p>
+</blockquote>
+<p><b>Installation manuelle du Site</b></p>
+<ol>
+	<li>Décompressez le fichier Projet.exe </li>
+	<li>Dans le fichier "Clinique_Base.sql" </li>
+		<blockquote>
+			<ul>
+				<li>Remplacez <Base>&quot;&lt;Data&gt;&quot; par le chemin de base de données de votre serveur MSSQL</li>
+				<li>Remplacez <Domaine>&quot;&lt;Domaine&gt;&quot; par le nom de votre ordinateur</li>
+			</ul>
+		</blockquote>
+	<li>Dans la ligne de command </li>
+		<blockquote>
+			<ul>
+				<li>Lancez la commande "osql -E -i Clinique_Base.sql -o Clinique_Base.txt"<br>
+				(consultez le fichier Clinique_Base.txt pour assurer l'importation de la base)</li>
+			</ul>
+		</blockquote>
+	<li>Partage du répertoire web</li>
+		<blockquote>
+			<ul>
+				<li>Dans le Gestionnaire des services Internet</li>
+				<li>Choisir Site Web par défaut</li>
+				<li>Cliquez sur Nouveau répertoire virtuel (Fig 3)</li>
+				<li>Donnez "Clinique" comme alias (Fig 4)</li>
+				<li>Spécifiez le chemin du site (Fig 5)</li>
+			</ul>
+		</blockquote>
+</ol>
+<p align="center"><img border="0" src="vir.jpg" width="435" height="525"><br>
+Fig 3 : Nouveau répertoire virtuel</p>
+<p align="center"><img border="0" src="ali.jpg" width="435" height="95"><br>
+Fig 4 : Clinique comme alias</p>
+<p align="center"><img border="0" src="rep.jpg" width="435" height="79"><br>
+Fig 5 : Spécifiez le chemin de site</p>
+<p align="center"><img border="0" src="site.jpg" width="779" height="595"><br>
+Fig 6 : Le Site de la Clinique des Oasis </p>
+
+</body>
+
+</html>
